@@ -16,5 +16,8 @@ public class SimppleDialogFragment {
 
     private static class SimppleDialogBuilder extends BaseDialogBuilder<SimppleDialogBuilder>{
 
+        public SimppleDialogBuilder(Context context, FragmentManager fragmentManager, Class<? extends BaseDialogFragment> claszz) {
+            super(context, fragmentManager, claszz);
+        }
     }
 }
