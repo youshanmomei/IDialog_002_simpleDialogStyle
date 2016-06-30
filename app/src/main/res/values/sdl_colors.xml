@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- dark colors: -->
+    <color name="sdl_message_text_dark">#FFFFFF</color>
+    <color name="sdl_title_text_dark">#ff0099cc</color>
+    <color name="sdl_title_separator_dark">#ff0099cc</color>
+    <color name="sdl_button_text_dark">@color/sdl_primary_text_holo_dark</color>
+
+
+
+    <!-- holo colors: -->
+    <color name="sdl_bright_foreground_holo_dark">#fff3f3f3</color>
+    <color name="sdl_bright_foreground_holo_light">#ff000000</color>
+    <color name="sdl_bright_foreground_disabled_holo_dark">#ff4c4c4c</color>
+    <color name="sdl_bright_foreground_disabled_holo_light">#ffb2b2b2</color>
+    <color name="sdl_button_separator_dark">#12ffffff</color>
+    <color name="sdl_button_noraml_dark">@android:color/transparent</color>
+
+</resources>
