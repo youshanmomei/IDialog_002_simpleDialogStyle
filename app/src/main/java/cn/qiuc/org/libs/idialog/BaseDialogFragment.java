@@ -6,6 +6,7 @@ import android.content.Context;
 import android.content.res.ColorStateList;
 import android.content.res.Resources;
 import android.content.res.TypedArray;
+import android.graphics.drawable.ColorDrawable;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -14,6 +15,7 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.ListAdapter;
+import android.widget.TextView;
 
 import cn.qiuc.org.idialog_002_simpledialogstyle.R;
 
@@ -119,6 +121,9 @@ public class BaseDialogFragment extends DialogFragment {
         private int mViewSpacingRight;
         private int mViewSpacingBottom;
         private Drawable mIcon;
+        private int mTitleTextColor;
+        private int mTitleSeparatorColor;
+        private int mMessageTextColor;
 
         public Builder(DialogFragment dialogFragment, Context context, LayoutInflater inflater, ViewGroup container) {
             this.mDialpgment = dialogFragment;
@@ -233,10 +238,47 @@ public class BaseDialogFragment extends DialogFragment {
             int defaultButtonBackgrroundColorPressed = res.getColor(R.color.sdl_Button_pressed_dark);
             int defaultButtonBackgroundColorFocused = res.getColor(R.color.sdl_button_focused_dark);
 
+            TypedArray a = mContext.getTheme().obtainStyledAttributes(null, R.styleable.DialogStyle, R.attr.sdlDialogStyle, 0);
+            mTitleTextColor = a.getColor(R.styleable.DialogStyle_titleTextColor, defaultTitleTextColor);
+            mTitleSeparatorColor = a.getColor(R.styleable.DialogStyle_titleSeparatorColor, defaultTitleSeparatorColor);
+            mMessageTextColor = a.getColor(R.styleable.DialogStyle_messageTextColor, defaultMessageTextColor);
+            ColorStateList mButtonTextColor = a.getColorStateList(R.styleable.DialogStyle_buttonTextColor);
+
+            if (mButtonTextColor == null) {
+                mButtonTextColor = defaultButtonTextColor;
+            }
+
+            int mButtonSeparatorColor = a.getColor(R.styleable.DialogStyle_buttonSeparatorColor, defaultButtonSeparatorColor);
+            int mButtonBackgroundColorNoraml = a.getColor(R.styleable.DialogStyle_buttonBackgroundColorNormal, defaultButtonBackgroundColorNormal);
+            int mButtonBackgroundColorPressed = a.getColor(R.styleable.DialogStyle_buttonBackgroundColorPressed, defaultButtonBackgrroundColorPressed);
+            int mButtonBackgroundColorFocused = a.getColor(R.styleable.DialogStyle_buttonBackgroundColorFocused, defaultButtonBackgroundColorFocused);
+            a.recycle();
+
+            View v = getDialogLayoutAndInitTitle();
             //TODO...
 
             return null;
 
+        }
+
+        private View getDialogLayoutAndInitTitle() {
+            View v = mInflater.inflate(R.layout.dialog_part_title, mContainer, false);
+            TextView tvTitle = (TextView) v.findViewById(R.id.sdl__title);
+            View viewTitleDivider = v.findViewById(R.id.sdl__titleDivider);
+            if (mTitle != null) {
+                tvTitle.setText(mTitle);
+                tvTitle.setTextColor(mTitleTextColor);
+                if (mIcon != null) {
+                    tvTitle.setCompoundDrawablesWithIntrinsicBounds(mIcon, null, null, null);
+                    tvTitle.setCompoundDrawablePadding(mContext.getResources().getDimensionPixelSize(R.dimen.grid_2));
+                }
+                viewTitleDivider.setBackgroundDrawable(new ColorDrawable(mTitleSeparatorColor));
+            } else {
+                tvTitle.setVisibility(View.GONE);
+                viewTitleDivider.setVisibility(View.GONE);
+            }
+
+            return v;
         }
 
 
