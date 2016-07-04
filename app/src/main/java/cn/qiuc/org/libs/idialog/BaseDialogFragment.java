@@ -1,7 +1,6 @@
 package cn.qiuc.org.libs.idialog;
 
 import android.app.Dialog;
-import android.app.DialogFragment;
 import android.content.Context;
 import android.content.res.ColorStateList;
 import android.content.res.Resources;
@@ -10,6 +9,7 @@ import android.graphics.drawable.ColorDrawable;
 import android.graphics.drawable.Drawable;
 import android.graphics.drawable.StateListDrawable;
 import android.os.Bundle;
+import android.support.v4.app.DialogFragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -94,7 +94,7 @@ public class BaseDialogFragment extends DialogFragment {
      */
     protected Button getNeutralButton() {
         if (getView() != null) {
-            return (Button) getView().findViewById(R.id.sdl__neural_button);
+            return (Button) getView().findViewById(R.id.sdl__netural_button);
         } else {
             return null;
         }
