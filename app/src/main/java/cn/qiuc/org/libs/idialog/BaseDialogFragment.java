@@ -24,7 +24,7 @@ import cn.qiuc.org.idialog_002_simpledialogstyle.R;
 /**
  * Created by admin on 2016/6/26.
  */
-public class BaseDialogFragment extends DialogFragment {
+public abstract class BaseDialogFragment extends DialogFragment {
 
     private static int mButtonSeparatorColor;
     private static int mButtonBackgroundColorNoraml;
@@ -48,12 +48,11 @@ public class BaseDialogFragment extends DialogFragment {
 
         return dialog;
     }
-/*
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         Builder builder = new Builder(this, getActivity(), inflater, container);
-        return builder;
+        return builder.create();
     }
 
     protected abstract Builder build(Builder initialBuilder);
@@ -61,11 +60,10 @@ public class BaseDialogFragment extends DialogFragment {
     @Override
     public void onDestroyView() {
         if (getDialog() != null && getRetainInstance()) {
-            getDialog().ssetDismissMessage(null);
+            getDialog().setDismissMessage(null);
         }
         super.onDestroyView();
     }
-*/
 
     /**
      * @return the positive button if specified and the view is created, null otherwise
