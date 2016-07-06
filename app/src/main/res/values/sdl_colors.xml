@@ -15,5 +15,6 @@
     <color name="sdl_bright_foreground_disabled_holo_light">#ffb2b2b2</color>
     <color name="sdl_button_separator_dark">#12ffffff</color>
     <color name="sdl_button_noraml_dark">@android:color/transparent</color>
+    <color name="sdl__message_text_dark">#FFFFFF</color>
 
 </resources>

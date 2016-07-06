@@ -20,9 +20,9 @@ public abstract class BaseDialogBuilder<T extends BaseDialogBuilder<T>> {
     private String mTag = DEFAULT_TAG;
     private int mRequestCode = DEFAUL_REQUEST_CODE;
 
-    private final FragmentManager mFragmentManager;
-    private final Context mContext;
-    private final Class<? extends BaseDialogFragment> mClass;
+    protected final FragmentManager mFragmentManager;
+    protected final Context mContext;
+    protected final Class<? extends BaseDialogFragment> mClass;
     private Fragment mTargetFragment;
     private boolean mCancelableOnTouchOutside;
 
@@ -35,7 +35,7 @@ public abstract class BaseDialogBuilder<T extends BaseDialogBuilder<T>> {
 
     protected abstract T self();
 
-    protected abstract Bundle preparearguments();
+    protected abstract Bundle prepareArguments();
 
     public T setCancelable(boolean cancelable) {
         mCancelable = cancelable;
@@ -67,7 +67,7 @@ public abstract class BaseDialogBuilder<T extends BaseDialogBuilder<T>> {
     }
 
     public DialogFragment show(){
-        Bundle args = preparearguments();
+        Bundle args = prepareArguments();
         BaseDialogFragment fragment = (BaseDialogFragment) Fragment.instantiate(mContext, mClass.getName(), args);
 
         args.putBoolean(ARG_CANCELABLE_ON_TOUCH_OUTSIDE, mCancelableOnTouchOutside);
