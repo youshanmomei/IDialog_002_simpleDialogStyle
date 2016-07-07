@@ -146,7 +146,12 @@ public abstract class BaseDialogFragment extends DialogFragment {
             return this;
         }
 
-        public Builder setPostiveButton(int textId, final View.OnClickListener listener) {
+        public Builder setTitle(CharSequence title) {
+            this.mTitle = title;
+            return this;
+        }
+
+        public Builder setPositiveButton(int textId, final View.OnClickListener listener) {
             mPositiveButtonText = mContext.getText(textId);
             mPositiveButtonListener = listener;
             return this;
