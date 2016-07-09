@@ -11,7 +11,7 @@ import android.view.View;
 /**
  * Created by admin on 2016/6/26.
  */
-public class SimppleDialogFragment extends BaseDialogFragment{
+public class SimpleDialogFragment extends BaseDialogFragment{
 
     public static String ARG_MESSAGR = "message";
     public static String ARG_TITLE = "title";
@@ -126,7 +126,7 @@ public class SimppleDialogFragment extends BaseDialogFragment{
         return null;
     }
 
-    private ISimpleDialogListener getDialogListener() {
+    protected ISimpleDialogListener getDialogListener() {
         final Fragment targetFragment = getTargetFragment();
         if (targetFragment != null) {
             if (targetFragment instanceof ISimpleDialogListener) {

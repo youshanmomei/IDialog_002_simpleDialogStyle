@@ -96,8 +96,8 @@ public class ProgressDialogFragment extends BaseDialogFragment {
         @Override
         protected Bundle prepareArguments() {
             Bundle args = new Bundle();
-            args.putString(SimppleDialogFragment.ARG_MESSAGR, mMessage);
-            args.putString(SimppleDialogFragment.ARG_TITLE, mTitle);
+            args.putString(SimpleDialogFragment.ARG_MESSAGR, mMessage);
+            args.putString(SimpleDialogFragment.ARG_TITLE, mTitle);
             return args;
         }
 

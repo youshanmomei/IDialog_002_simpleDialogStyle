@@ -81,7 +81,7 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
 
             //------------------------------//
             case R.id.btn_sim_dia_msg:
-//                SimppleDialogFragment.createBuilder(myMainActivity, getSupportFragmentManager()).setMessage(R.string.msg_1).show();
+//                SimpleDialogFragment.createBuilder(myMainActivity, getSupportFragmentManager()).setMessage(R.string.msg_1).show();
                 break;
             case R.id.btn_sim_dia_msg_title:
 
