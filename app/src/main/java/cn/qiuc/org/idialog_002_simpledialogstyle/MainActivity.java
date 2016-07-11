@@ -5,6 +5,8 @@ import android.support.v4.app.FragmentActivity;
 import android.view.View;
 import android.widget.Button;
 
+import cn.qiuc.org.libs.idialog.SimpleDialogFragment;
+
 public class MainActivity extends FragmentActivity implements View.OnClickListener {
 
     public static final int THEME_DEFAULT_DARK = 0;
@@ -81,7 +83,7 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
 
             //------------------------------//
             case R.id.btn_sim_dia_msg:
-//                SimpleDialogFragment.createBuilder(myMainActivity, getSupportFragmentManager()).setMessage(R.string.msg_1).show();
+                SimpleDialogFragment.createBuilder(myMainActivity, getSupportFragmentManager()).setMessage(R.string.msg_1).show();
                 break;
             case R.id.btn_sim_dia_msg_title:
 
