@@ -24,4 +24,8 @@
         <item name="android:textSize">18dp</item>
     </style>
 
+    <style name="DefaultDarkTheme" parent="android:Theme">
+        <item name="sdlDialogStyle">@style/DialogStyleDark</item>
+    </style>
+
 </resources>

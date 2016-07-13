@@ -1,4 +1,10 @@
 <resources>
     <string name="app_name">IDialog_002_simpleDialogStyle</string>
+    <string name="title">Favourite title</string>
     <string name="msg_1">从容地让自己生活地更深刻些，怀英，慢慢来</string>
+    <string name="msg_2">爱是什么感觉，好像忽然间有了铠甲，也忽然间有了软肋</string>
+    <string name="msg_3">罗胖曰：“穷是一种罪恶，穷会让你在束缚在一个地方，永远不要因为穷约束自己，束缚自己感受更加广阔的世界”</string>
+    <string name="msg_4">Sala: I\'m just wait to see if I pass out. Long story</string>
+    <string name="positive_button">Love</string>
+    <string name="negative_button">Hate</string>
 </resources>
