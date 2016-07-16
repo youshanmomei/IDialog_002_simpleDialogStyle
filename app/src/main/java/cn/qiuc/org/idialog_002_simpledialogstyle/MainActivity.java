@@ -136,14 +136,14 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
         int theme = getIntent().getIntExtra(EXTRA_THEME, THEME_CUSTOM_DARK);
         switch (theme) {
             case THEME_DEFAULT_DARK:
-//                setTheme(R.style.DefaultDarkTheme);
+                setTheme(R.style.DefaultDarkTheme);
                 break;
             case THEME_DEFAULT_LIGHT:
-//                setTheme(R.style.DefaultLightTheme);
+                setTheme(R.style.DefaultLightTheme);
                 break;
 //                setTheme(R.style.CustomDarkTheme);
             case THEME_CUSTOM_DARK:
-//                setTheme(R.style.CustomLightTheme);
+                setTheme(R.style.CustomLightTheme);
                 break;
             case  THEME_CUSTOM_LIGHT:
 

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
 
     <style name="SDL" />
 
@@ -19,6 +19,7 @@
         <!--TODO sdlMessageTextStyle-->
         <!--TODO sdlDialogStyle-->
     </style>
+
 
     <style name="SDL.Group">
         <item name="android:layout_width">match_parent</item>
@@ -74,5 +75,26 @@
         <item name="android:layout_marginBottom">@dimen/grid_4</item>
     </style>
 
+    <style name="DialogStyleDark">
+        <item name="dialogBackground">@drawable/sdl_background_dark</item>
+        <item name="android:titleTextColor" tools:targetApi="m">@color/sdl_title_text_dark</item>
+        <item name="titleSeparatorColor">@color/sdl_title_separator_dark</item>
+        <item name="messageTextColor">@color/sdl_button_text_dark</item>
+        <item name="buttonSeparatorColor">@color/sdl_button_separator_dark</item>
+        <item name="buttonBackgroundColorNormal">@color/sdl_button_noraml_dark</item>
+        <item name="buttonBackgroundColorPressed">@color/sdl_Button_pressed_dark</item>
+        <item name="buttonBackgroundColorFocused">@color/sdl_button_focused_dark</item>
+    </style>
+
+    <style name="DialogStyleLight">
+        <item name="dialogBackground">@drawable/sdl_background_light</item>
+        <item name="android:titleTextColor" tools:targetApi="m">@color/sdl_title_text_light</item>
+        <item name="titleSeparatorColor">@color/sdl_title_separator_light</item>
+        <item name="messageTextColor">@color/sdl_button_text_light</item>
+        <item name="buttonSeparatorColor">@color/sdl_button_separator_light</item>
+        <item name="buttonBackgroundColorNormal">@color/sdl_button_normal_light</item>
+        <item name="buttonBackgroundColorPressed">@color/sdl_button_pressed_light</item>
+        <item name="buttonBackgroundColorFocused">@color/sdl_button_focused_light</item>
+    </style>
 
 </resources>
